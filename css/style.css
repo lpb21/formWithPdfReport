@@ -1,0 +1,299 @@
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    
+    html {
+        overflow-y: scroll;
+    }
+    
+    body {
+        background: #c1bdba;
+        font-family: "Titillium Web", sans-serif;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #1ab188;
+        transition: 0.5s ease;
+    }
+    
+    a:hover {
+        color: #179b77;
+    }
+    
+    .form {
+        background: rgba(19, 35, 47, 0.9);
+        padding: 40px;
+        max-width: 600px;
+        margin: 40px auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    }
+    
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+    
+    .tab-group:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .tab-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+        background: rgba(160, 179, 176, 0.25);
+        color: #a0b3b0;
+        font-size: 20px;
+        float: left;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    
+    .tab-group li a:hover {
+        background: #179b77;
+        color: #ffffff;
+    }
+    
+    .tab-group .active a {
+        background: #1ab188;
+        color: #ffffff;
+    }
+    
+    .tab-content>div:last-child {
+        display: none;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 0 0 40px;
+    }
+    
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+    
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+    
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+    
+    label.active .req {
+        opacity: 0;
+    }
+    
+    label.highlight {
+        color: #ffffff;
+    }
+    
+    input,
+    textarea {
+        font-size: 22px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px 10px;
+        background: none;
+        background-image: none;
+        border: 1px solid #a0b3b0;
+        color: #ffffff;
+        border-radius: 0;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    
+    input:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: #1ab188;
+    }
+    
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+    
+    .field-wrap {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .top-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .top-row>div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+    
+    .top-row>div:last-child {
+        margin: 0;
+    }
+    
+    .select-css {
+        position: relative;
+        margin-bottom: 40px;
+        display: block;
+        font-size: 22px;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        /* color: #444; */
+        line-height: 1.3;
+        padding: 4px 10px;
+        width: 400px;
+        /* height: 100px; */
+        max-width: 100%;
+        box-sizing: border-box;
+        /*margin: 20px auto;*/
+        border: 1px solid #a0b3b0;
+        color: #ffffff;
+        box-shadow: 0 1px 0 1px rgba(0, 0, 0, .03);
+        border-radius: 0;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+        /* background-color: #fff; */
+        box-shadow: 0 4px 10px 4px rgb(19 35 47 / 30%);
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, rgba(19, 35, 47, 0.9) 0%, rgba(19, 35, 47, 0.9) 100%);
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+    }
+    
+    .select-css::-ms-expand {
+        display: none;
+    }
+    
+    .select-css:hover {
+        border-color: #888;
+    }
+    
+    .select-css:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #aaa;
+        ;
+        outline: none;
+    }
+    
+    .select-css option {
+        font-weight: normal;
+    }
+    
+    .classOfElementToColor:hover {
+        background-color: red;
+        color: black
+    }
+    
+    .select-css option[selected] {
+        background-color: orange;
+    }
+    
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 15px 0;
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        background: #1ab188;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+    }
+    
+    .button:hover,
+    .button:focus {
+        background: #179b77;
+    }
+    
+    .button-block {
+        display: block;
+        width: 100%;
+    }
+    
+    .forgot {
+        margin-top: -20px;
+        text-align: right;
+    }
+    
+    table {
+        width: 520px;
+        /* border-collapse: collapse; */
+        empty-cells: hide;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    th,
+    td {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+    
+    th {
+        text-align: left;
+    }
+    
+    thead {
+        th {
+            background-color: #55608f;
+        }
+    }
+    
+    tbody {
+        tr {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+        td {
+            position: relative;
+            &:hover {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: -9999px;
+                    bottom: -9999px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    z-index: -1;
+                }
+            }
+        }
+    }
